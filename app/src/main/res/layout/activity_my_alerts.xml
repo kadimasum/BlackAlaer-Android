@@ -42,25 +42,23 @@
 
             <LinearLayout
                 android:id="@+id/addressContainer"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
-                android:background="@drawable/card_radius"
-                android:padding="20dp"
-                android:layout_marginBottom="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/card_radius"
+                android:orientation="horizontal"
+                android:padding="20dp">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/marker"
                     android:layout_width="34sp"
                     android:layout_height="34sp"
-                    app:srcCompat="@drawable/ic_baseline_location_on_24"
-                    android:layout_marginEnd="10dp"/>
+                    android:layout_marginEnd="10dp"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -68,6 +66,54 @@
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/submissionDay"
+                android:layout_below="@id/addressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/card_radius"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/timeOfSubmission"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_address"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/submissionDay2"
+                android:layout_below="@id/submissionDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/card_radius"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/timeOfSubmission2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_address"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
@@ -77,13 +123,14 @@
                 android:layout_height="70dp"
                 android:textAllCaps="false"
                 android:textColor="@color/blackAlertJaguar_dark"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="60dp"
                 android:textSize="34sp"
                 android:background="@drawable/button_radius"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/create_alert"
-                android:layout_below="@+id/addressContainer"
+                android:layout_below="@+id/submissionDay2"
                 android:layout_centerHorizontal="true"/>
 
 
