@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login_signup2.CreateAccountTwo"
+    android:background="@color/blackAlertJaguar_dark">
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackAlertJaguar_dark">
+        >
+        <!--        Top Bar-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2/2"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"/>
+        <TextView
+            android:id="@+id/login_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:textColor="@color/blackAlertBrightSun_yellow"
+            android:textSize="18dp"/>
+
+        <!--        End of top-->
+        <!--        Finish setting up your account-->
+        <TextView
+            android:id="@+id/create_accountHeader_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish setting up your account"
+            android:textSize="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:layout_below="@id/login_link"
+            />
+
+<!--        Gender-->
+        <TextView
+            android:id="@+id/create_account_gender_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_below="@id/create_accountHeader_2"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/create_account_gender_header">
+
+            <RadioButton
+                android:id="@+id/create_account_radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textColor="@color/white"
+                android:text="Male"
+                android:layout_marginStart="16dp"
+                />
+            <RadioButton
+                android:id="@+id/create_account_radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textColor="@color/white"
+                android:text="Female"
+                android:layout_marginStart="16dp"
+                />
+        </RadioGroup>
+
+        <!--       Age-->
+        <EditText
+            android:id="@+id/Create_account_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:drawableLeft="@drawable/age"
+            android:inputType="number"
+            android:textColorHint="@color/blackAlertHint"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/radio_group_create"
+            android:background="@color/blackAlertJagger_purple"
+            android:padding="8dp"
+            android:minHeight="48dp"/>
+
+        <!--        Location-->
+        <EditText
+            android:id="@+id/Create_account_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:inputType="text"
+            android:textColorHint="@color/blackAlertHint"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/Create_account_age"
+            android:background="@color/blackAlertJagger_purple"
+            android:padding="8dp"
+            android:minHeight="48dp"/>
+
+        <!--        Address-->
+        <EditText
+            android:id="@+id/Create_account_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:drawableLeft="@drawable/address"
+            android:inputType="textAutoCorrect"
+            android:textColorHint="@color/blackAlertHint"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/Create_account_location"
+            android:background="@color/blackAlertJagger_purple"
+            android:padding="8dp"
+            android:minHeight="48dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/finish_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Create_account_address"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/blackAlertBrightSun_yellow"
+            android:elevation="4dp"
+            android:minHeight="48dp"
+            android:text="Finish"
+            android:textColor="@color/blackAlertJaguar_dark"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+</ScrollView>

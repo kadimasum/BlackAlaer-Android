@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlackAlertAndroid">
         <activity
+            android:name=".ui.login_signup2.Login"
+            android:exported="true" />
+        <activity
+            android:name=".ui.login_signup2.CreateAccountTwo"
+            android:exported="true" />
+        <activity
+            android:name=".ui.login_signup2.CreateAccountOne"
+            android:exported="true" />
+        <activity
             android:name=".ui.login_signup.MainActivity"
             android:exported="true">
             <intent-filter>
