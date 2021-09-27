@@ -3,4 +3,6 @@
     <string name="welcome_message">Welcome Eric</string>
     <string name="no_alerts">No Alerts found</string>
     <string name="create_alert">Create Alert</string>
+    <string name="my_alerts">My Alerts</string>
+    <string name="default_address">Donholm Phase 5</string>
 </resources>

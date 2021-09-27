@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blackAlertJaguar_dark"
-    tools:context=".ui.app.AlertHomeActivity">
+    tools:context=".ui.app.MyAlertsActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,58 +22,69 @@
             app:srcCompat="@drawable/menu" />
 
         <TextView
-            android:id="@+id/welcomeMessage"
+            android:id="@+id/myAlerts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/menu"
             android:layout_centerHorizontal="true"
             android:textColor="@color/white"
-            android:text="@string/welcome_message"
+            android:text="@string/my_alerts"
             android:textSize="24sp"
             android:layout_marginTop="70dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/welcomeMessage"
+            android:layout_below="@+id/myAlerts"
             android:layout_marginTop="70dp"
             android:background="@drawable/background">
 
 
-            <TextView
-                android:id="@+id/noAlertsFound"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/addressContainer"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/card_radius"
+                android:padding="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/no_alerts"
-                android:layout_marginTop="40dp"
-                android:textSize="24sp"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/white"/>
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/noAlertsFoundImg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/not_found"
-                android:layout_below="@id/noAlertsFound"
-                android:layout_marginTop="60dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="100dp"/>
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="34sp"
+                    android:layout_height="34sp"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_address"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/createAlertButton"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_below="@+id/noAlertsFoundImg"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="60dp"
-                android:background="@drawable/button_radius"
-                android:text="@string/create_alert"
                 android:textAllCaps="false"
                 android:textColor="@color/blackAlertJaguar_dark"
-                android:textSize="34sp" />
+                android:layout_marginBottom="60dp"
+                android:textSize="34sp"
+                android:background="@drawable/button_radius"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/create_alert"
+                android:layout_below="@+id/addressContainer"
+                android:layout_centerHorizontal="true"/>
 
 
         </RelativeLayout>
