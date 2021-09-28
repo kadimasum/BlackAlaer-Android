@@ -68,54 +68,12 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/submissionDay"
-                android:layout_below="@id/addressContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_below="@+id/addressContainer"
                 android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:background="@drawable/card_radius"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-
-                <TextView
-                    android:id="@+id/timeOfSubmission"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/default_address"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/submissionDay2"
-                android:layout_below="@id/submissionDay"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/card_radius"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-
-                <TextView
-                    android:id="@+id/timeOfSubmission2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/default_address"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
+                android:layout_height="match_parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/createAlertButton"
@@ -130,8 +88,10 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/create_alert"
-                android:layout_below="@+id/submissionDay2"
+                android:layout_below="@+id/recyclerView"
                 android:layout_centerHorizontal="true"/>
+
+
 
 
         </RelativeLayout>

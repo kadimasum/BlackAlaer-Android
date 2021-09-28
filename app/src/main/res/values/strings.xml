@@ -5,4 +5,6 @@
     <string name="create_alert">Create Alert</string>
     <string name="my_alerts">My Alerts</string>
     <string name="default_address">Donholm Phase 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="alerts_in_your_area">54 Alerts in your area</string>
 </resources>

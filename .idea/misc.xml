@@ -9,7 +9,9 @@
         <entry key="app/src/main/res/drawable/cards_radius.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_alert_home.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_my_alerts.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_my_alerts.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/created_alert_time.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_alerts_map.xml" value="0.24048913043478262" />
       </map>
     </option>
   </component>
