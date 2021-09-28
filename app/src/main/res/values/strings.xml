@@ -7,4 +7,6 @@
     <string name="default_address">Donholm Phase 5</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="alerts_in_your_area">54 Alerts in your area</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
