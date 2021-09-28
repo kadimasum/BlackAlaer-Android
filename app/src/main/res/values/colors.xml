@@ -11,4 +11,5 @@
     <color name="blackAlertJagger_purple">#3A3047</color>
     <color name="blackAlertBrightSun_yellow">#E9C12E</color>
     <color name="blackAlertMulledWine_light_purple">#584D66</color>
+    <color name="blackAlertHint">#FFFFFF</color>
 </resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:background="@color/blackAlertJaguar_dark">
+
+<!--Cancel Button-->
+        <ImageView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:layout_margin="16dp"/>
+
+        <!--        Row1-->
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_below="@id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_icon_holder"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="40dp"
+            android:layout_below="@+id/cancel_btn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erick Wathome"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@+id/cancel_btn"
+            android:layout_toRightOf="@id/img_icon_holder"
+            android:layout_margin="16dp"/>
+        </LinearLayout>
+
+<!--        Row2-->
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_below="@id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/bell_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:src="@drawable/notification2"
+            android:layout_below="@id/img_icon_holder"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Alerts"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@+id/img_icon_holder"
+            android:layout_toRightOf="@id/bell_notification"
+            android:layout_margin="16dp"/>
+        </LinearLayout>
+
+<!--        Row3-->
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_below="@id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:src="@drawable/settings_icon"
+            android:layout_below="@id/bell_notification"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@+id/bell_notification"
+            android:layout_toRightOf="@id/settings_icon"
+            android:layout_margin="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/logout_parent_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@color/blackAlertBrightSun_yellow"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"/>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

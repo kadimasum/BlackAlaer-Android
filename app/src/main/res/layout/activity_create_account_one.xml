@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login_signup2.CreateAccountOne"
+    android:background="@color/blackAlertJaguar_dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackAlertJaguar_dark">
+
+<!--        Top Bar-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/2"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"/>
+        <TextView
+            android:id="@+id/login_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:textColor="@color/blackAlertBrightSun_yellow"
+            android:textSize="18dp"/>
+
+<!--        End of top-->
+<!--        Create Your Account-->
+        <TextView
+            android:id="@+id/create_accountHeader_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your Account"
+            android:textSize="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:layout_below="@id/login_link"
+            />
+
+<!--        First Name-->
+        <EditText
+            android:id="@+id/Create_account_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/create_accountHeader_1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/blackAlertJagger_purple"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:hint="First Name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textColorHint="@color/blackAlertHint"
+            tools:ignore="TextContrastCheck" />
+
+<!--        Last Name-->
+            <EditText
+                android:id="@+id/Create_account_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Create_account_first_name"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/blackAlertJagger_purple"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColorHint="@color/blackAlertHint" />
+
+        <!--        Email-->
+        <EditText
+            android:id="@+id/Create_account_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:inputType="textWebEmailAddress"
+            android:textColorHint="@color/blackAlertHint"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/Create_account_last_name"
+            android:background="@color/blackAlertJagger_purple"
+            android:padding="8dp"
+            android:minHeight="48dp"/>
+
+        <!--        Password-->
+        <EditText
+            android:id="@+id/Create_account_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_baseline_password_24"
+            android:textColorHint="@color/blackAlertHint"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/Create_account_email"
+            android:background="@color/blackAlertJagger_purple"
+            android:padding="8dp"
+            android:minHeight="48dp"/>
+
+        <!--        Confirm Password-->
+        <EditText
+            android:id="@+id/Create_account_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_password_24"
+            android:layout_below="@+id/Create_account_password"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/blackAlertJagger_purple"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textColorHint="@color/blackAlertHint"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Create_account_confirm_password"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/blackAlertBrightSun_yellow"
+            android:elevation="4dp"
+            android:minHeight="48dp"
+            android:text="Next"
+            android:textColor="@color/blackAlertJaguar_dark"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

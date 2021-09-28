@@ -1,18 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login_signup.MainActivity">
+    android:padding="10dp"
+    tools:context=".ui.login_signup.MainActivity"
+    android:background="@color/blackAlertJaguar_dark">
+
+
+    <LinearLayout
+        android:id="@+id/linear12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/splach_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="BLACK"
+            android:textColor="#fff"
+            android:textSize="32dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/splach_logo"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="OUT"
+            android:textColor="@color/blackAlertBrightSun_yellow"
+            android:textSize="32dp" />
+
+    </LinearLayout>
+
 
     <TextView
+        android:id="@+id/splach_hero_text"
+        android:layout_width="250dp"
+        android:layout_below="@id/linear12"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Get instant blackout alerts"
+        android:textColor="#fff"
+        android:textSize="24dp" />
+
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/splach_hero_text"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/textButton"
+        android:src="@drawable/undraw_programmer_imem_1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/buttonradius"
+            android:minHeight="48dp"
+            android:text="Get Started"
+            android:textColor="@color/blackAlertJaguar_dark"
+            android:textSize="20dp"
+            android:layout_marginBottom="16px"/>
+
+
+
+</RelativeLayout>
