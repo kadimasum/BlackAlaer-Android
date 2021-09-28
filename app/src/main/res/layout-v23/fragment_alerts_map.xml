@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blackAlertJagger_purple"
+    tools:context=".ui.app.AlertsMapFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackAlertJagger_purple">
+
+
+        <TextView
+            android:id="@+id/alertsFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alerts_in_your_area"
+            android:layout_marginTop="40dp"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/noAlertsFoundImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/map"
+            android:foreground="@drawable/map_radius"
+            android:layout_below="@id/alertsFound"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createAlertButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/noAlertsFoundImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/button_radius"
+            android:text="@string/create_alert"
+            android:textAllCaps="false"
+            android:textColor="@color/blackAlertJaguar_dark"
+            android:textSize="34sp" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
