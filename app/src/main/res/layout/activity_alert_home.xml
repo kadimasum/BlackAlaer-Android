@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackAlertJaguar_dark"
+    tools:context=".ui.app.AlertHomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackAlertJaguar_dark">
+
+        <TextView
+            android:id="@+id/welcomeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="@string/welcome_message"
+            android:textSize="24sp"
+            android:layout_marginTop="70dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/welcomeMessage"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/background">
+
+
+            <TextView
+                android:id="@+id/noAlertsFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_alerts"
+                android:layout_marginTop="40dp"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/noAlertsFoundImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/not_found"
+                android:layout_below="@id/noAlertsFound"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="100dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/createAlertButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/noAlertsFoundImg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/button_radius"
+                android:text="@string/create_alert"
+                android:textAllCaps="false"
+                android:textColor="@color/blackAlertJaguar_dark"
+                android:textSize="34sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

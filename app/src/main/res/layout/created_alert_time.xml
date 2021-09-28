@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blackAlertJaguar_dark">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_radius"
+        android:paddingStart="20dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="30dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_radius"
+        android:paddingStart="20dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="30dp"
+        android:text="3:30pm - 7:43pm"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

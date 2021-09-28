@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">BlackAlertAndroid</string>
+
+    <string name="welcome_message">Welcome Eric</string>
+    <string name="no_alerts">No Alerts found</string>
+    <string name="create_alert">Create Alert</string>
+    <string name="my_alerts">My Alerts</string>
+    <string name="default_address">Donholm Phase 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="alerts_in_your_area">54 Alerts in your area</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_text">Settings</string>
+    <string name="location_details">Update your location details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
