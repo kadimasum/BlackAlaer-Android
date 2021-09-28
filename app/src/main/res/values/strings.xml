@@ -9,4 +9,6 @@
     <string name="alerts_in_your_area">54 Alerts in your area</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_text">Settings</string>
+    <string name="location_details">Update your location details</string>
 </resources>
