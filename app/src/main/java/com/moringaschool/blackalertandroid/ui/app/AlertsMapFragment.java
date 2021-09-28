@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.moringaschool.blackalertandroid.R;
 
@@ -16,6 +17,8 @@ import com.moringaschool.blackalertandroid.R;
  * create an instance of this fragment.
  */
 public class AlertsMapFragment extends Fragment {
+
+    private TextView alertsFound;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +65,9 @@ public class AlertsMapFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_alerts_map, container, false);
+    }
+
+    private String getColoredSpanned(String text, String color) {
+        return "<font color=" + color + ">" + text + "</font>";
     }
 }
