@@ -46,11 +46,12 @@
             android:layout_height="wrap_content"
             android:hint="Email"
             android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="12dp"
             android:inputType="textWebEmailAddress"
             android:textColorHint="@color/blackAlertHint"
             android:layout_margin="16dp"
             android:layout_below="@+id/login_header"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:padding="8dp"
             android:minHeight="48dp"/>
 
@@ -61,11 +62,12 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:drawableLeft="@drawable/ic_baseline_password_24"
+            android:drawablePadding="12dp"
             android:inputType="textPassword"
             android:textColorHint="@color/blackAlertHint"
             android:layout_margin="16dp"
             android:layout_below="@+id/login_email"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:padding="8dp"
             android:minHeight="48dp"/>
 
@@ -75,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_password"
             android:layout_margin="16dp"
-            android:background="@color/blackAlertBrightSun_yellow"
+            android:background="@drawable/button_radius"
             android:elevation="4dp"
             android:minHeight="48dp"
             android:text="Login"

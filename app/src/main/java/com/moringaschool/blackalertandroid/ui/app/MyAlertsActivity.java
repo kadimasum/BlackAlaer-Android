@@ -35,7 +35,7 @@ public class MyAlertsActivity extends AppCompatActivity implements NavigationVie
         navigationView.bringToFront();
 
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.user);
+        navigationView.setCheckedItem(R.id.my_alerts);
     }
 
     @Override
