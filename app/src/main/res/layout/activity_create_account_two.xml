@@ -93,15 +93,19 @@
             android:id="@+id/Create_account_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Age"
-            android:drawableLeft="@drawable/age"
-            android:inputType="number"
-            android:textColorHint="@color/blackAlertHint"
-            android:layout_margin="16dp"
             android:layout_below="@+id/radio_group_create"
-            android:background="@color/blackAlertJagger_purple"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_radius"
+            android:drawableLeft="@drawable/age"
+            android:drawablePadding="12dp"
+            android:hint="Age"
+            android:inputType="number"
+            android:minHeight="48dp"
             android:padding="8dp"
-            android:minHeight="48dp"/>
+            android:textColorHint="@color/blackAlertHint" />
 
         <!--        Location-->
         <EditText
@@ -110,34 +114,21 @@
             android:layout_height="wrap_content"
             android:hint="Location"
             android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="12dp"
             android:inputType="text"
             android:textColorHint="@color/blackAlertHint"
             android:layout_margin="16dp"
             android:layout_below="@+id/Create_account_age"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:padding="8dp"
             android:minHeight="48dp"/>
 
-        <!--        Address-->
-        <EditText
-            android:id="@+id/Create_account_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Address"
-            android:drawableLeft="@drawable/address"
-            android:inputType="textAutoCorrect"
-            android:textColorHint="@color/blackAlertHint"
-            android:layout_margin="16dp"
-            android:layout_below="@+id/Create_account_location"
-            android:background="@color/blackAlertJagger_purple"
-            android:padding="8dp"
-            android:minHeight="48dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/finish_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Create_account_address"
+            android:layout_below="@+id/Create_account_location"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"

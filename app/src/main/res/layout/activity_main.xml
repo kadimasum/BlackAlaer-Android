@@ -60,16 +60,17 @@
         android:src="@drawable/undraw_programmer_imem_1" />
 
     <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/textButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/buttonradius"
-            android:minHeight="48dp"
-            android:text="Get Started"
-            android:textColor="@color/blackAlertJaguar_dark"
-            android:textSize="20dp"
-            android:layout_marginBottom="16px"/>
+        android:id="@+id/textButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16px"
+        android:background="@drawable/buttonradius"
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        android:text="Get Started"
+        android:textColor="@color/blackAlertJaguar_dark"
+        android:textSize="20dp" />
 
 
 

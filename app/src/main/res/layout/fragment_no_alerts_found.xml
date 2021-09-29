@@ -36,19 +36,18 @@
             android:layout_marginBottom="100dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/createAlertButton"
+            android:id="@+id/login_btn"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/noAlertsFoundImg"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="60dp"
+            android:layout_margin="16dp"
             android:background="@drawable/button_radius"
+            android:elevation="4dp"
+            android:minHeight="48dp"
             android:text="@string/create_alert"
-            android:textAllCaps="false"
             android:textColor="@color/blackAlertJaguar_dark"
-            android:textSize="34sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>

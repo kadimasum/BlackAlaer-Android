@@ -1,76 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blackAlertJaguar_dark"
-    tools:context=".ui.app.AlertHomeActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".ui.app.AlertHomeActivity"
+    tools:openDrawer="start">
 
-    <RelativeLayout
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/blackAlertJaguar_dark"
+        app:headerLayout="@layout/header"
+        app:itemTextColor="@color/white"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/main_menu" />
+
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blackAlertJaguar_dark">
-
-        <TextView
-            android:id="@+id/welcomeMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="@string/welcome_message"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/welcomeMessage"
-            android:layout_marginTop="70dp"
-            android:background="@drawable/background">
-
+            android:layout_height="wrap_content"
+            android:background="@color/blackAlertJaguar_dark">
 
             <TextView
-                android:id="@+id/noAlertsFound"
+                android:id="@+id/welcomeMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no_alerts"
-                android:layout_marginTop="40dp"
-                android:textSize="24sp"
                 android:layout_centerHorizontal="true"
-                android:textColor="@color/white"/>
+                android:layout_marginTop="88dp"
+                android:text="@string/welcome_message"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/welcomeMessage"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/background">
+
+
+                <TextView
+                    android:id="@+id/noAlertsFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/no_alerts"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/noAlertsFoundImg"
+                    android:layout_width="140sp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noAlertsFound"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:contentDescription="@string/no_alerts_found"
+                    app:srcCompat="@drawable/not_found" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/createAlertButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/noAlertsFoundImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="36dp"
+                    android:background="@drawable/button_radius"
+                    android:elevation="4dp"
+                    android:minHeight="48dp"
+                    android:text="@string/create_alert"
+                    android:textColor="@color/blackAlertJaguar_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
 
             <ImageView
-                android:id="@+id/noAlertsFoundImg"
-                android:layout_width="140sp"
+                android:id="@+id/menu_icon"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/not_found"
-                android:layout_below="@id/noAlertsFound"
-                android:layout_marginTop="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="40dp"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/createAlertButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/noAlertsFoundImg"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textStyle="bold"
-                android:elevation="4dp"
-                android:minHeight="48dp"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/button_radius"
-                android:text="@string/create_alert"
-                android:textColor="@color/blackAlertJaguar_dark"
-                android:textSize="18sp" />
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/menu" />
 
 
         </RelativeLayout>
 
+    </ScrollView>
 
-    </RelativeLayout>
-
-</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
