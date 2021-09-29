@@ -14,10 +14,11 @@
     <string name="location_details">Update your location details</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
     <string name="user">User</string>
     <string name="settings">Settings</string>
     <string name="logout">Logout</string>
     <string name="no_alerts_found">noAlertsFound</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>
