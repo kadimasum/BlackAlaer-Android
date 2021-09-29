@@ -26,7 +26,7 @@ public class CreateAccountTwo extends AppCompatActivity {
         finish_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CreateAccountTwo.this, MapsActivity.class));
+                startActivity(new Intent(CreateAccountTwo.this, Login.class));
             }
         });
         login_link.setOnClickListener(new View.OnClickListener() {

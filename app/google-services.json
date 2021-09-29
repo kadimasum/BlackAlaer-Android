@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "418204459029",
+    "project_id": "blackalert-bb630",
+    "storage_bucket": "blackalert-bb630.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418204459029:android:a5b40377f97397582cee1c",
+        "android_client_info": {
+          "package_name": "com.moringaschool.blackalertandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418204459029-ru73mpoufq1ua7iha3khrelr8apr57q0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.blackalertandroid",
+            "certificate_hash": "5092ca5f7637343cf868676db8c430b76cbf006f"
+          }
+        },
+        {
+          "client_id": "418204459029-hb3tom1qqsv33mupkt78k26atmeno4kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbt1Hw_ONOamKQFM1vtg_k8wXa08VxZvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418204459029-hb3tom1qqsv33mupkt78k26atmeno4kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
