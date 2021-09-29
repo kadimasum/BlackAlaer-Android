@@ -112,16 +112,19 @@
             android:id="@+id/Create_account_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Location"
+            android:layout_below="@+id/Create_account_age"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_radius"
             android:drawableLeft="@drawable/ic_baseline_location_on_24"
             android:drawablePadding="12dp"
+            android:hint="Location"
             android:inputType="text"
-            android:textColorHint="@color/blackAlertHint"
-            android:layout_margin="16dp"
-            android:layout_below="@+id/Create_account_age"
-            android:background="@drawable/input_radius"
+            android:minHeight="48dp"
             android:padding="8dp"
-            android:minHeight="48dp"/>
+            android:textColorHint="@color/blackAlertHint" />
 
 
         <androidx.appcompat.widget.AppCompatButton
