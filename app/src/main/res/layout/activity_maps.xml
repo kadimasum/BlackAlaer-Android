@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/blackAlertJagger_purple"
+tools:context=".ui.app.AlertsMapFragment">
+
+<!-- TODO: Update blank fragment layout -->
+
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.app.MapsActivity" />
+    android:background="@color/blackAlertJagger_purple">
+
+
+    <TextView
+        android:id="@+id/alertsFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alerts_in_your_area"
+        android:layout_marginTop="40dp"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/map_radius"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@id/alertsFound"
+        tools:context=".ui.app.MapsActivity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createAlertButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/map"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_radius"
+        android:text="@string/create_alert"
+        android:textAllCaps="false"
+        android:textColor="@color/blackAlertJaguar_dark"
+        android:textSize="34sp" />
+
+
+</RelativeLayout>
+
+</FrameLayout>
