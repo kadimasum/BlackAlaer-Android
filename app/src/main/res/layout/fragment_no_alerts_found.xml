@@ -46,7 +46,7 @@
             android:minHeight="48dp"
             android:text="@string/create_alert"
             android:textColor="@color/blackAlertJaguar_dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
 
