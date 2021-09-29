@@ -59,7 +59,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:drawableLeft="@drawable/ic_baseline_person_24"
             android:hint="First Name"
             android:inputType="text"
@@ -78,7 +78,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:background="@color/blackAlertJagger_purple"
+                android:background="@drawable/input_radius"
                 android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:hint="Last Name"
                 android:inputType="text"
@@ -97,7 +97,7 @@
             android:textColorHint="@color/blackAlertHint"
             android:layout_margin="16dp"
             android:layout_below="@+id/Create_account_last_name"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:padding="8dp"
             android:minHeight="48dp"/>
 
@@ -112,7 +112,7 @@
             android:textColorHint="@color/blackAlertHint"
             android:layout_margin="16dp"
             android:layout_below="@+id/Create_account_email"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:padding="8dp"
             android:minHeight="48dp"/>
 
@@ -127,7 +127,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@color/blackAlertJagger_purple"
+            android:background="@drawable/input_radius"
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:minHeight="48dp"
