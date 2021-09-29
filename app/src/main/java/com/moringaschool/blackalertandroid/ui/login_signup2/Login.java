@@ -31,19 +31,6 @@ public class Login extends AppCompatActivity {
         login_email = (EditText) findViewById(R.id.login_email);
         login_password = (EditText) findViewById(R.id.login_password);
 
-        String loginEmail = login_email.getText().toString().trim();
-        String loginPassword = login_password.getText().toString();
-
-        if(loginEmail.isEmpty()){
-            login_email.setError("Email required!");
-            login_email.requestFocus();
-        }else if(loginPassword.isEmpty()){
-            login_password.setError("Password required!");
-            login_password.requestFocus();
-        }else if(!Patterns.EMAIL_ADDRESS.matcher(loginEmail).matches()){
-            login_email.setError("Use the correct email format");
-            login_email.requestFocus();
-        }
 
         sign_up_link.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +42,28 @@ public class Login extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String loginEmail = login_email.getText().toString().trim();
+                String loginPassword = login_password.getText().toString();
+
                 if(loginEmail.isEmpty() && loginPassword.isEmpty()){
                     Toast.makeText(Login.this, "Email and password required!", Toast.LENGTH_LONG).show();
+                } else  if(loginEmail.isEmpty()){
+                    login_email.setError("Email required!");
+                    login_email.requestFocus();
+                }else if(loginPassword.isEmpty()){
+                    login_password.setError("Password required!");
+                    login_password.requestFocus();
+                }else if(!Patterns.EMAIL_ADDRESS.matcher(loginEmail).matches()){
+                    login_email.setError("Use the correct email format");
+                    login_email.requestFocus();
+                }else if(loginPassword.length() < 6){
+                    login_password.setError("Password must be a minimum of 6 values");
+                }else {
+                    startActivity(new Intent(Login.this, AlertHomeActivity.class));
                 }
-                startActivity(new Intent(Login.this, AlertHomeActivity.class));
             }
+
         });
 
     }
