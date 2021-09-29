@@ -8,6 +8,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +23,7 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ImageView toolbar;
+    Button createAlertAlertHome_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,14 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         toolbar = (ImageView) findViewById(R.id.menu_icon);
+        createAlertAlertHome_btn = (Button) findViewById(R.id.createAlertButton);
+
+        createAlertAlertHome_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AlertHomeActivity.this, MapsActivity.class));
+            }
+        });
 
         // <---------TOOL BAR --------->
 
