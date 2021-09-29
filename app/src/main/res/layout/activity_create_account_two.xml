@@ -123,27 +123,12 @@
             android:padding="8dp"
             android:minHeight="48dp"/>
 
-        <!--        Address-->
-        <EditText
-            android:id="@+id/Create_account_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Address"
-            android:drawableLeft="@drawable/address"
-            android:drawablePadding="12dp"
-            android:inputType="textAutoCorrect"
-            android:textColorHint="@color/blackAlertHint"
-            android:layout_margin="16dp"
-            android:layout_below="@+id/Create_account_location"
-            android:background="@drawable/input_radius"
-            android:padding="8dp"
-            android:minHeight="48dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/finish_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Create_account_address"
+            android:layout_below="@+id/Create_account_location"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
