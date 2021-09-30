@@ -1,5 +1,6 @@
 package com.moringaschool.blackalertandroid.ui.login_signup2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,13 +12,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.moringaschool.blackalertandroid.R;
+
+import java.util.HashMap;
 
 public class CreateAccountOne extends AppCompatActivity {
     Button next_btn;
     TextView loginLink;
     EditText first_name, last_name, email, password, confirm_password;
 
+    private FirebaseDatabase db = FirebaseDatabase.getInstance();
+    private DatabaseReference root = db.getReference().child("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +44,13 @@ public class CreateAccountOne extends AppCompatActivity {
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                    saveDataToDataBase();
+                    startActivity(new Intent(CreateAccountOne.this, CreateAccountTwo.class));
+
+            }
+
+            private void saveDataToDataBase() {
                 String firstName = first_name.getText().toString().trim();
                 String lastName = last_name.getText().toString().trim();
                 String Email = email.getText().toString().trim();
@@ -70,9 +86,21 @@ public class CreateAccountOne extends AppCompatActivity {
                 }else if(!(confirmPassword.matches(Password))){
                     confirm_password.setError("Password does not match");
                     confirm_password.requestFocus();
-                }else {
-                    startActivity(new Intent(CreateAccountOne.this, CreateAccountTwo.class));
                 }
+
+
+                HashMap<String, String> user = new HashMap<>();
+                user.put("firstName", firstName);
+                user.put("lastName", lastName);
+                user.put("email", Email);
+                user.put("Password", Password);
+
+                root.push().setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(CreateAccountOne.this, "Input saved successfully!", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
