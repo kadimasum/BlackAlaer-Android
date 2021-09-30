@@ -61,22 +61,37 @@
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
-                <ImageView
-                    android:id="@+id/noAlertsFoundImg"
-                    android:layout_width="140sp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/noAlertsFound"
+<!--                <ImageView-->
+<!--                    android:id="@+id/noAlertsFoundImg"-->
+<!--                    android:layout_width="140sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/noAlertsFound"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:layout_marginBottom="40dp"-->
+<!--                    android:contentDescription="@string/no_alerts_found"-->
+<!--                    app:srcCompat="@drawable/not_found" />-->
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="240sp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="40dp"
-                    android:contentDescription="@string/no_alerts_found"
-                    app:srcCompat="@drawable/not_found" />
+                    android:layout_marginBottom="24dp"
+                    android:layout_below="@id/noAlertsFound"
+                    tools:context=".ui.app.MapsActivity" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/createAlertButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/noAlertsFoundImg"
+                    android:layout_below="@+id/map"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
@@ -96,11 +111,12 @@
                 android:id="@+id/menu_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
                 android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
-                app:srcCompat="@drawable/menu" />
+                android:layout_marginBottom="12dp"
+                app:srcCompat="@drawable/menu"
+                android:contentDescription="TODO" />
 
 
         </RelativeLayout>
