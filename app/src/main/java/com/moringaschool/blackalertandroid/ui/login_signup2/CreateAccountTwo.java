@@ -1,5 +1,6 @@
 package com.moringaschool.blackalertandroid.ui.login_signup2;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,9 +12,18 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.Status;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.widget.Autocomplete;
+import com.google.android.libraries.places.widget.AutocompleteActivity;
+import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 import com.moringaschool.blackalertandroid.R;
 import com.moringaschool.blackalertandroid.ui.app.AlertHomeActivity;
 import com.moringaschool.blackalertandroid.ui.app.MapsActivity;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class CreateAccountTwo extends AppCompatActivity {
     Button finish_btn;
@@ -33,6 +43,27 @@ public class CreateAccountTwo extends AppCompatActivity {
         location = (EditText) findViewById(R.id.Create_account_location);
         gender_female = (RadioButton) findViewById(R.id.create_account_radio_female);
         gender_male = (RadioButton) findViewById(R.id.create_account_radio_male);
+
+        // initialize places
+        Places.initialize(getApplicationContext(), "AIzaSyCRwGJ26TisTv2RFwYrjGhrU6nv4SgWX8Q");
+
+        // sets location non focusable
+        location.setFocusable(false);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // initialize place field list
+                List<Place.Field> fieldList = Arrays.asList(Place.Field.ADDRESS, Place.Field.LAT_LNG, Place.Field.NAME);
+
+                // create intent
+                Intent intent = new Autocomplete.IntentBuilder(AutocompleteActivityMode.OVERLAY, fieldList).build(CreateAccountTwo.this);
+
+                // start activity result
+                startActivityForResult(intent, 100);
+
+            }
+        });
+
 
         finish_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +97,25 @@ public class CreateAccountTwo extends AppCompatActivity {
                 startActivity(new Intent(CreateAccountTwo.this, Login.class));
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 100 && resultCode == RESULT_OK){
+            // Initializes places when successful
+            assert data != null;
+            Place place = Autocomplete.getPlaceFromIntent(data);
+
+            // set address on location
+            location.setText(place.getAddress());
+        } else if (resultCode == AutocompleteActivity.RESULT_ERROR){
+            // initialize status when there is an error
+            assert data != null;
+            Status status = Autocomplete.getStatusFromIntent(data);
+
+            //Display Toast
+            Toast.makeText(getApplicationContext(), status.getStatusMessage(), Toast.LENGTH_LONG).show();
+        }
     }
 }
