@@ -25,8 +25,6 @@ public class CreateAccountOne extends AppCompatActivity {
     TextView loginLink;
     EditText first_name, last_name, email, password, confirm_password;
 
-    private FirebaseDatabase db = FirebaseDatabase.getInstance();
-    private DatabaseReference root = db.getReference().child("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +43,11 @@ public class CreateAccountOne extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    saveDataToDataBase();
-                    startActivity(new Intent(CreateAccountOne.this, CreateAccountTwo.class));
+                    transferDataToNextActivity();
 
             }
 
-            private void saveDataToDataBase() {
+            private void transferDataToNextActivity() {
                 String firstName = first_name.getText().toString().trim();
                 String lastName = last_name.getText().toString().trim();
                 String Email = email.getText().toString().trim();
@@ -88,19 +85,13 @@ public class CreateAccountOne extends AppCompatActivity {
                     confirm_password.requestFocus();
                 }
 
+               Intent intent = new Intent(CreateAccountOne.this, CreateAccountTwo.class);
+               intent.putExtra("firstName", firstName);
+               intent.putExtra("lastName", lastName);
+               intent.putExtra("Email", Email);
+               intent.putExtra("Password", Password);
 
-                HashMap<String, String> user = new HashMap<>();
-                user.put("firstName", firstName);
-                user.put("lastName", lastName);
-                user.put("email", Email);
-                user.put("Password", Password);
-
-                root.push().setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(CreateAccountOne.this, "Input saved successfully!", Toast.LENGTH_SHORT).show();
-                    }
-                });
+               startActivity(intent);
             }
         });
 
