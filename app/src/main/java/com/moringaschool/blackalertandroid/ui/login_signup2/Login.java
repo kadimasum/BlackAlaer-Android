@@ -88,19 +88,19 @@ public class Login extends AppCompatActivity {
 
                 else {
 
-                    startActivity(new Intent(Login.this, AlertHomeActivity.class));
+//                    startActivity(new Intent(Login.this, AlertHomeActivity.class));
 
-//                    mAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<AuthResult> task) {
-//                            if (task.isSuccessful()) {
-//                                startActivity(new Intent(Login.this, AlertHomeActivity.class));
-//                            } else {
-//                                Toast.makeText(Login.this, "Failed to login! Please check your credentials.", Toast.LENGTH_SHORT).show();
-//
-//                            }
-//                        }
-//                    });
+                    mAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                startActivity(new Intent(Login.this, AlertHomeActivity.class));
+                            } else {
+                                Toast.makeText(Login.this, "Failed to login! Please check your credentials.", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    });
                 }
 
             }
