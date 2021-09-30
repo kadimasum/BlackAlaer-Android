@@ -1,19 +1,25 @@
 package com.moringaschool.blackalertandroid.ui.modules;
 
 public class Alert{
-    private boolean alertStatus;
-    private String location;
+    private String blackoutAlert;
+    private String blackoutLocation;
+    private String blackoutTime;
 
-    public Alert(boolean alertStatus, String location) {
-        this.alertStatus = alertStatus;
-        this.location = location;
+    public Alert(String blackoutAlert, String blackoutLocation, String blackoutTime) {
+        this.blackoutAlert = blackoutAlert;
+        this.blackoutLocation = blackoutLocation;
+        this.blackoutTime = blackoutTime;
     }
 
-    public boolean isAlertStatus() {
-        return alertStatus;
+    public String getBlackoutAlert() {
+        return blackoutAlert;
     }
 
-    public String getLocation() {
-        return location;
+    public String getBlackoutLocation() {
+        return blackoutLocation;
+    }
+
+    public String getBlackoutTime() {
+        return blackoutTime;
     }
 }

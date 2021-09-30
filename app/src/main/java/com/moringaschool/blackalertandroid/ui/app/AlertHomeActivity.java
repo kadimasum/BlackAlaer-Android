@@ -1,11 +1,13 @@
 package com.moringaschool.blackalertandroid.ui.app;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.moringaschool.blackalertandroid.R;
 
+
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class AlertHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -52,15 +56,20 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
         alertCount = 0;
 
         createAlertAlertHome_btn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 alertCount++;
                 String blackoutAlert = Integer.toString(alertCount);
                 String blackoutLocation = "Nairobi";
 
+                LocalDate localDate = LocalDate.now();
+                String timeOfBlackout = localDate.toString();
+
                 HashMap<String, String> alert = new HashMap<>();
                 alert.put("blackoutAlert", blackoutAlert);
                 alert.put("blackoutLocation", blackoutLocation);
+                alert.put("blackoutTime", timeOfBlackout);
 
                 root.push().setValue(alert).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
