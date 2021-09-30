@@ -11,11 +11,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.moringaschool.blackalertandroid.R;
+
+import java.util.HashMap;
 
 public class AlertHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +31,12 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
     NavigationView navigationView;
     ImageView toolbar;
     Button createAlertAlertHome_btn;
+
+    int alertCount ;
+
+    private FirebaseDatabase db = FirebaseDatabase.getInstance();
+    private DatabaseReference root = db.getReference().child("alerts");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +49,28 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
         toolbar = (ImageView) findViewById(R.id.menu_icon);
         createAlertAlertHome_btn = (Button) findViewById(R.id.createAlertButton);
 
+        alertCount = 0;
+
         createAlertAlertHome_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AlertHomeActivity.this, MapsActivity.class));
+                alertCount++;
+                String blackoutAlert = Integer.toString(alertCount);
+                String blackoutLocation = "Nairobi";
+
+                HashMap<String, String> alert = new HashMap<>();
+                alert.put("blackoutAlert", blackoutAlert);
+                alert.put("blackoutLocation", blackoutLocation);
+
+                root.push().setValue(alert).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(AlertHomeActivity.this, "Alert created successfully!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
             }
         });
 

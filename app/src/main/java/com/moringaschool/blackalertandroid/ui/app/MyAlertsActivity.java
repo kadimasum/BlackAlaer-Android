@@ -19,6 +19,7 @@ public class MyAlertsActivity extends AppCompatActivity implements NavigationVie
     NavigationView navigationView;
     ImageView toolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
