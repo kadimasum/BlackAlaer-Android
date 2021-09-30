@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -26,6 +27,7 @@ import com.moringaschool.blackalertandroid.R;
 
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 
 public class AlertHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,6 +37,7 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
     NavigationView navigationView;
     ImageView toolbar;
     Button createAlertAlertHome_btn;
+    TextView no_of_alerts;
 
     int alertCount ;
 
@@ -52,6 +55,7 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         toolbar = (ImageView) findViewById(R.id.menu_icon);
         createAlertAlertHome_btn = (Button) findViewById(R.id.createAlertButton);
+        no_of_alerts = (TextView) findViewById(R.id.no_of_alerts);
 
         alertCount = 0;
 
@@ -62,6 +66,7 @@ public class AlertHomeActivity extends AppCompatActivity implements NavigationVi
                 alertCount++;
                 String blackoutAlert = Integer.toString(alertCount);
                 String blackoutLocation = "Nairobi";
+                no_of_alerts.setText(blackoutAlert);
 
                 LocalDate localDate = LocalDate.now();
                 String timeOfBlackout = localDate.toString();

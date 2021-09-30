@@ -51,15 +51,31 @@
                 android:background="@drawable/background">
 
 
+<!--                No alerts founds-->
+
                 <TextView
                     android:id="@+id/noAlertsFound"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="40dp"
-                    android:text="@string/no_alerts"
+                    android:text="alert(s) found"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
+
+<!--                Number of alerts-->
+                <TextView
+                    android:id="@+id/no_of_alerts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blackAlertBrightSun_yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toLeftOf="@id/noAlertsFound"
+                    android:textSize="24sp"/>
 
 <!--                <ImageView-->
 <!--                    android:id="@+id/noAlertsFoundImg"-->
